@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/datamongo_1828.iml" filepath="$PROJECT_DIR$/datamongo_1828.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/datamongo_1828_main.iml" filepath="$PROJECT_DIR$/.idea/modules/datamongo_1828_main.iml" group="datamongo_1828" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/datamongo_1828_test.iml" filepath="$PROJECT_DIR$/.idea/modules/datamongo_1828_test.iml" group="datamongo_1828" />
+    </modules>
+  </component>
+</project>
