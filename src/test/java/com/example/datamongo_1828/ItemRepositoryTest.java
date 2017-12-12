@@ -37,12 +37,9 @@ public class ItemRepositoryTest {
 	@Before
 	public void insertData() {
 		repository.save(new Item().id(1).tags(Arrays.asList("a", "b")));
-		repository.save(new Item().id(2).tags(Arrays.asList("c")));
+		repository.save(new Item().id(2).tags(Arrays.asList("c")).name("Fredrik"));
 	}
-
-	/**
-	 * Fails: `ReferenceError: a is not defined`.
-	 */
+	
 	@Test
 	public void findByOptionalTag() {
 		List<Item> result = repository.findByOptionalTag("a");
@@ -59,5 +56,11 @@ public class ItemRepositoryTest {
 	public void findByTags() {
 		List<Item> result = repository.findByTags("a");
 		assertThat(result).extracting("id").containsExactly(1);
+	}
+
+	@Test
+	public void findByOptionalName() {
+		List<Item> result = repository.findByOptionalName("Fredrik");
+		assertThat(result).extracting("id").containsExactly(2);
 	}
 }

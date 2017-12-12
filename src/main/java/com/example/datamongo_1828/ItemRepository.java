@@ -11,5 +11,9 @@ public interface ItemRepository extends MongoRepository<Item, Integer> {
 
     @Query("{ $or : [ { $where: '?0 == null' } , { id: ?0 } ] }")
     List<Item> findByOptionalId(Integer id);
+
     List<Item> findByTags(String tag);
+
+    @Query("{ $or : [ { $where: '\"?0\" == null' } , { name: ?0 } ] }")
+    List<Item> findByOptionalName(String name);
 }
